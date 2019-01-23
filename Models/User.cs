@@ -1,8 +1,8 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-using APIFinancas.Interfaces;
+using APIFinances.Interfaces;
 
-namespace APIFinancas.Models
+namespace APIFinances.Models
 {
     public class User : ITimeStampedModel
     {

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace APIFinancas.Migrations
+namespace APIFinances.Migrations
 {
     public partial class CreateTableUsers : Migration
     {

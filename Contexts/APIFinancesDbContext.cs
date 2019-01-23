@@ -1,12 +1,12 @@
 using System;
 using System.Linq;
-using APIFinancas.Interfaces;
-using APIFinancas.Models;
+using APIFinances.Interfaces;
+using APIFinances.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace APIFinancas.Contexts
+namespace APIFinances.Contexts
 {
-    public class APIFinancasDbContext : DbContext
+    public class APIFinancesDbContext : DbContext
     {
         //Database Table Maps
         public DbSet<User> Users { get; set; }
@@ -15,10 +15,10 @@ namespace APIFinancas.Contexts
         public string DbServerName { get; }
         public string DbDatabaseName { get; }
 
-        public APIFinancasDbContext()
+        public APIFinancesDbContext()
         {
             DbServerName = "localhost";
-            DbDatabaseName = "Financas";
+            DbDatabaseName = "Finances";
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -1,6 +1,6 @@
 using System;
 
-namespace APIFinancas.Interfaces
+namespace APIFinances.Interfaces
 {
     interface ITimeStampedModel
     {
