@@ -14,15 +14,19 @@ namespace APIFinances.Contexts
         //Connection Strings
         public string DbServerName { get; }
         public string DbDatabaseName { get; }
+        public string DbUsername { get; }
+        public string DbPassword { get; }
 
-        public APIFinancesDbContext()
+        public APIFinancesDbContext(DbContextOptions<APIFinancesDbContext> dbContextOptions) : base(dbContextOptions)
         {
             DbServerName = "localhost";
             DbDatabaseName = "Finances";
+            DbUsername = "SA";
+            DbPassword = "Dev4you@2018";
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer($"Server = {DbServerName}; Database = {DbDatabaseName}; Trusted_Connection = False");
+            optionsBuilder.UseSqlServer($"Server = {DbServerName}; Database = {DbDatabaseName}; User Id = {DbUsername}; Password = {DbPassword} Trusted_Connection=False");
             base.OnConfiguring(optionsBuilder);
         }
 
